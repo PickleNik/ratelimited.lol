@@ -77,6 +77,12 @@ import Layout from "../layouts/Layout.astro";
         >
         More
       </div>
+      <button
+        id="tweet"
+        class="bg-[#1DA1F2] w-full mr-auto mt-4 p-4 font-bold text-xl flex justify-center items-center text-white gap-4 rounded-full"
+      >
+        Tweet
+      </button>
     </div>
     <div
       class="relative w-full md:w-[30vw] grid place-items-center md:h-screen h-[30vh] text-neutral-400"
@@ -200,6 +206,12 @@ import Layout from "../layouts/Layout.astro";
         </a>© 2069 ratelimited Corp.
       </div>
     </div>
+    <div
+      id="notification"
+      class="bg-[#1DA1F2] text-white rounded-md p-4 duration-300 fixed bottom-4 left-1/2 -translate-x-1/2 opacity-0"
+    >
+      Sorry, you are rate limited. Please wait a few moments then try again.
+    </div>
   </main>
 </Layout>
 
@@ -208,6 +220,8 @@ import Layout from "../layouts/Layout.astro";
   const b = document.querySelector("#whatever");
   const g = document.querySelector("#verified");
   const b2 = document.getElementById("whatever");
+  const notif = document.getElementById("notification");
+  const tweet = document.getElementById("tweet");
   const { width: cWidth, height: cHeight } = c.getBoundingClientRect();
   const { width: bWidth, height: bHeight } = b.getBoundingClientRect();
 
@@ -224,4 +238,10 @@ import Layout from "../layouts/Layout.astro";
   });
   b.addEventListener("mouseenter", () => move());
   b.addEventListener("click", () => move());
+  tweet.addEventListener("click", () => {
+    notif.style.opacity = "1";
+    setTimeout(() => {
+      notif.style.opacity = "0";
+    }, 500);
+  });
 </script>
