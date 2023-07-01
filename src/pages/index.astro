@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="RateLimited">
   <main id="container" class="flex md:flex-row flex-col">
     <div
-      class="flex flex-col md:border-r border-b md:border-b-0 p-4 w-full md:w-64 md:h-screen gap-2 border-neutral-800"
+      class="relative flex flex-col md:border-r border-b md:border-b-0 p-4 w-full md:w-64 md:h-screen gap-2 border-neutral-800"
     >
       <svg
         role="img"
@@ -83,6 +83,29 @@ import Layout from "../layouts/Layout.astro";
       >
         Tweet
       </button>
+      <div
+        id="profile"
+        class="hidden md:flex w-[85%] items-center p-2 rounded-full hover:bg-neutral-800 duration-300 cursor-pointer absolute bottom-4 right-4 gap-4"
+      >
+        <div
+          class="rounded-full bg-contain bg-[url('https://pbs.twimg.com/profile_images/1590968738358079488/IY9Gx6Ok_400x400.jpg')] w-12 h-12"
+        >
+        </div>
+        <div class="flex flex-col">
+          <div class="text-lg font-bold">Elon Musk</div>
+          <div class="text-neutral-400">elon_musk</div>
+        </div>
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          class="fill-neutral-400 w-6 h-6 ml-auto"
+          ><g
+            ><path
+              d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+            ></path></g
+          ></svg
+        >
+      </div>
     </div>
     <div
       class="relative w-full md:w-[30vw] grid place-items-center md:h-screen h-[30vh] text-neutral-400"
@@ -221,6 +244,7 @@ import Layout from "../layouts/Layout.astro";
   const b2 = document.getElementById("whatever");
   const notif = document.getElementById("notification");
   const tweet = document.getElementById("tweet");
+  const profile = document.getElementById("profile");
   const { width: cWidth, height: cHeight } = c.getBoundingClientRect();
   const { width: bWidth, height: bHeight } = b.getBoundingClientRect();
 
@@ -238,6 +262,12 @@ import Layout from "../layouts/Layout.astro";
   b.addEventListener("mouseenter", () => move());
   b.addEventListener("click", () => move());
   tweet.addEventListener("click", () => {
+    notif.style.opacity = "1";
+    setTimeout(() => {
+      notif.style.opacity = "0";
+    }, 500);
+  });
+  profile.addEventListener("click", () => {
     notif.style.opacity = "1";
     setTimeout(() => {
       notif.style.opacity = "0";
