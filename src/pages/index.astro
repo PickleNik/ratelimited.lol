@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="RateLimited">
-  <main class="flex md:flex-row flex-col">
+  <main id="container" class="flex md:flex-row flex-col">
     <div
       class="flex flex-col md:border-r border-b md:border-b-0 p-4 w-96 md:h-screen gap-2 border-neutral-800"
     >
@@ -79,7 +79,6 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
     <div
-      id="container"
       class="relative w-full md:w-[30vw] grid place-items-center md:h-screen h-[30vh] text-neutral-400"
     >
       <div class="-mt-32">Something went wrong. Try reloading.</div>
