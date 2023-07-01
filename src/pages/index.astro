@@ -3,9 +3,9 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="RateLimited">
-  <main class="flex">
+  <main class="flex md:flex-row flex-col">
     <div
-      class="flex flex-col border-r p-4 w-96 h-screen gap-2 border-neutral-800"
+      class="flex flex-col md:border-r border-b md:border-b-0 p-4 w-96 md:h-screen gap-2 border-neutral-800"
     >
       <svg
         role="img"
@@ -18,7 +18,7 @@ import Layout from "../layouts/Layout.astro";
         ></path></svg
       >
       <div
-        class="p-3 duration-300 flex gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full font-bold items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full font-bold items-center cursor-pointer text-2xl"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8 fill-white"
           ><g
@@ -30,7 +30,7 @@ import Layout from "../layouts/Layout.astro";
         Home
       </div>
       <div
-        class="p-3 duration-300 flex gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8 fill-white"
           ><g
@@ -42,7 +42,7 @@ import Layout from "../layouts/Layout.astro";
         Notifications
       </div>
       <div
-        class="p-3 duration-300 flex gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8 fill-white"
           ><g
@@ -54,7 +54,7 @@ import Layout from "../layouts/Layout.astro";
         Messages
       </div>
       <div
-        class="p-3 duration-300 flex gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8 fill-white"
           ><g
@@ -66,7 +66,7 @@ import Layout from "../layouts/Layout.astro";
         Profile
       </div>
       <div
-        class="p-3 duration-300 flex gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8 fill-white"
           ><g
@@ -80,7 +80,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
     <div
       id="container"
-      class="relative w-[30vw] grid place-items-center h-screen text-neutral-400"
+      class="relative w-full md:w-[30vw] grid place-items-center md:h-screen h-[50vh] text-neutral-400"
     >
       <div class="-mt-32">Something went wrong. Try reloading.</div>
       <button
@@ -98,7 +98,7 @@ import Layout from "../layouts/Layout.astro";
       </button>
     </div>
     <div
-      class="flex flex-col border-l p-4 w-96 h-screen gap-4 border-neutral-800"
+      class="flex flex-col md:border-l border-t md:border-t-0 p-4 w-96 md:h-screen gap-4 border-neutral-800"
     >
       <div
         class="p-4 bg-neutral-800 text-neutral-400 rounded-full text-2xl w-full flex gap-8"
