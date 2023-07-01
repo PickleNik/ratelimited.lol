@@ -84,7 +84,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="-mt-32">Something went wrong. Try reloading.</div>
       <button
         id="whatever"
-        class="bg-[#1DA1F2] md:top-1/2 top-52 left-1/2 -translate-x-1/2 -translate-y-1/2 fixed duration-300 pr-5 p-4 font-bold text-2xl flex items-center text-white gap-4 rounded-full"
+        class="bg-[#1DA1F2] md:top-1/2 top-52 left-1/2 -translate-x-1/2 -translate-y-1/2 fixed duration-300 pr-5 p-4 py-3 font-bold text-2xl flex items-center text-white gap-4 rounded-full"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true" class="fill-white h-8 w-8"
           ><g
@@ -100,18 +100,45 @@ import Layout from "../layouts/Layout.astro";
       class="flex flex-col md:border-l border-t md:border-t-0 p-4 w-96 md:h-screen gap-4 border-neutral-800"
     >
       <div
-        class="p-4 hidden md:flex bg-neutral-800 text-neutral-400 rounded-full text-2xl w-full gap-8"
+        class="px-4 py-3 items-center hidden md:flex bg-neutral-800 text-neutral-400 rounded-full text-xl w-full gap-8"
       >
         <svg
           viewBox="0 0 24 24"
           aria-hidden="true"
-          class="w-8 h-8 fill-neutral-400"
+          class="w-6 h-6 fill-neutral-400"
           ><g
             ><path
               d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z"
             ></path></g
           ></svg
         ><span>Search Twitter</span>
+      </div>
+      <div class="hidden md:flex rounded-2xl bg-neutral-800 flex-col gap-4 p-4">
+        <h1 class="text-2xl font-bold">Get Verified</h1>
+        <div class="flex gap-4">
+          <div class="flex flex-col">
+            <div class="text-lg font-bold">
+              Subscribe to unlock more ratelimiting!
+            </div>
+            <button
+              class="bg-[#1DA1F2] mr-auto mt-4 px-4 py-2 font-bold text-xl flex items-center text-white gap-4 rounded-full"
+            >
+              Get Verified
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:flex rounded-2xl bg-neutral-800 flex-col gap-4 p-4">
+        <h1 class="text-2xl font-bold">What's happenning?</h1>
+        <div class="flex gap-4">
+          <div class="flex flex-col">
+            <div class="text-neutral-400">Trending in United States</div>
+            <div class="text-lg font-bold">
+              Sorry, you are rate limited. Please wait a few moments then try
+              again.
+            </div>
+          </div>
+        </div>
       </div>
       <div class="rounded-2xl bg-neutral-800 flex flex-col gap-4 p-4">
         <h1 class="text-2xl font-bold">Who to follow</h1>
