@@ -753,6 +753,20 @@ import Layout from "../layouts/Layout.astro";
   </main>
 </Layout>
 
+<style>
+  @media screen and (max-height: 1000px) {
+    #bookmarks {
+      display: none;
+    }
+    #communities {
+      display: none;
+    }
+    #lists {
+      display: none;
+    }
+  }
+</style>
+
 <script is:inline>
   // const c = document.querySelector("#container");
   const b = document.querySelector("#whatever");
