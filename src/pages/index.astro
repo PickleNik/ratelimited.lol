@@ -28,6 +28,8 @@ import Right from "../components/index/Right.astro";
     const tweetmobile = document.getElementById("tweetmobile");
     const profile = document.getElementById("profile");
 
+    const tree = document.getElementById("tree");
+
     const home = document.getElementById("home");
     const explore = document.getElementById("explore");
     const notifs = document.getElementById("notifs");
@@ -69,6 +71,10 @@ import Right from "../components/index/Right.astro";
       g.style.borderRadius = "0.5rem";
       g.innerText =
         "Sorry, you are rate limited. Please wait a few moments then try again.";
+    });
+
+    tree.addEventListener("click", () => {
+      window.open("https://discord.gg/VWEcEhsR", "_blank");
     });
 
     function tweety() {
