@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="RateLimited">
   <main id="container" class="flex md:flex-row flex-col">
     <div
-      class="relative flex flex-col md:border-r border-b md:border-b-0 p-4 w-full md:w-64 md:h-screen gap-2 border-neutral-800"
+      class="relative flex flex-col md:border-r border-b md:border-b-0 p-4 w-full md:w-72 md:h-screen gap-3 border-neutral-800"
     >
       <svg
         role="img"
@@ -18,7 +18,7 @@ import Layout from "../layouts/Layout.astro";
       >
       <div
         id="home"
-        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full font-bold items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full font-bold items-center cursor-pointer text-2xl"
       >
         <svg
           viewBox="0 0 24 24"
@@ -34,7 +34,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div
         id="explore"
-        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg
           viewBox="0 0 24 24"
@@ -50,7 +50,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div
         id="notifs"
-        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg
           viewBox="0 0 24 24"
@@ -66,7 +66,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div
         id="messages"
-        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg
           viewBox="0 0 24 24"
@@ -82,7 +82,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div
         id="lists"
-        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg
           viewBox="0 0 24 24"
@@ -98,7 +98,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div
         id="bookmarks"
-        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8 fill-current"
           ><g
@@ -111,7 +111,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div
         id="communities"
-        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg
           viewBox="0 0 24 24"
@@ -127,7 +127,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div
         id="limited"
-        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg
           viewBox="0 0 24 24"
@@ -143,7 +143,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div
         id="profilelink"
-        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg
           viewBox="0 0 24 24"
@@ -159,7 +159,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div
         id="more"
-        class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg
           viewBox="0 0 24 24"
@@ -175,7 +175,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <button
         id="tweet"
-        class="bg-[#1DA1F2] hidden w-full mr-auto mt-4 p-4 font-bold text-xl md:flex justify-center items-center text-neutral-200 gap-4 rounded-full"
+        class="bg-[#1DA1F2] hidden w-[90%] mr-auto mt-4 p-4 font-bold text-xl md:flex justify-center items-center text-white gap-4 rounded-full"
       >
         Tweet
       </button>
@@ -219,17 +219,14 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
     <div
-      class="relative w-full md:w-[30vw] grid place-items-center md:h-screen h-[30vh] text-neutral-400"
+      class="relative w-full md:w-[598px] grid place-items-center md:h-screen h-[30vh] text-neutral-400"
     >
       <div class="-mt-32 text-center">Something went wrong. Try reloading.</div>
       <button
         id="whatever"
-        class="bg-[#1DA1F2] z-50 fixed duration-300 pr-5 p-4 py-3 font-bold text-2xl flex items-center text-neutral-200 gap-4 rounded-full"
+        class="bg-[#1DA1F2] z-50 fixed duration-300 pr-5 p-4 py-3 font-bold text-2xl flex items-center text-white shadow-2xl gap-4 rounded-full"
       >
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          class="fill-neutral-200 h-8 w-8"
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="fill-white h-8 w-8"
           ><g
             ><path
               d="M12 4c-4.418 0-8 3.58-8 8s3.582 8 8 8c3.806 0 6.993-2.66 7.802-6.22l1.95.44C20.742 18.67 16.76 22 12 22 6.477 22 2 17.52 2 12S6.477 2 12 2c3.272 0 6.176 1.57 8 4V3.5h2v6h-6v-2h2.616C17.175 5.39 14.749 4 12 4z"
@@ -240,7 +237,7 @@ import Layout from "../layouts/Layout.astro";
       </button>
     </div>
     <div
-      class="flex max-h-screen overflow-y-auto flex-col md:border-l border-t md:border-t-0 p-4 w-96 md:h-screen gap-4 border-neutral-800"
+      class="flex max-h-screen overflow-y-auto flex-col md:border-l border-t md:border-t-0 px-7 py-2 w-[25rem] md:h-screen gap-4 border-neutral-800"
     >
       <div
         class="px-4 pl-6 py-3 items-center hidden md:flex bg-neutral-900 text-neutral-500 rounded-full text-xl w-full gap-6"
@@ -256,16 +253,16 @@ import Layout from "../layouts/Layout.astro";
           ></svg
         ><span>Search Twitter</span>
       </div>
-      <div class="hidden md:flex rounded-2xl bg-neutral-900 flex-col gap-4 p-4">
+      <div class="hidden md:flex rounded-2xl bg-neutral-900 flex-col p-4">
         <h1 class="text-2xl font-bold">Get Verified</h1>
-        <div class="flex gap-4">
+        <div class="flex">
           <div class="flex flex-col">
-            <div class="text-lg font-bold">
+            <div style="font-size: 1.05rem" class="font-bold my-3">
               Subscribe to unlock more ratelimiting!
             </div>
             <button
               id="verified"
-              class="bg-[#1DA1F2] mr-auto mt-4 px-4 py-2 font-bold text-xl flex items-center text-neutral-200 gap-4 rounded-full"
+              class="bg-[#1DA1F2] mr-auto px-5 py-2 font-bold text-lg flex items-center text-white gap-4 rounded-full"
             >
               Get Verified
             </button>
@@ -276,7 +273,7 @@ import Layout from "../layouts/Layout.astro";
         <h1 class="text-2xl font-bold">What's happenning?</h1>
         <div class="flex gap-4">
           <div class="flex flex-col">
-            <div class="text-neutral-400">Trending in United States</div>
+            <div class="text-neutral-500">Trending in United States</div>
             <div class="text-lg font-bold">
               You are rate limited. Please wait a few moments then try again.
             </div>
@@ -310,7 +307,7 @@ import Layout from "../layouts/Layout.astro";
                 ></svg
               >
             </div>
-            <div class="text-neutral-400">@picklenik0864</div>
+            <div class="text-neutral-500">@picklenik0864</div>
           </div>
           <button
             class="bg-neutral-200 text-black font-bold rounded-full px-4 my-auto py-2 ml-auto"
@@ -343,7 +340,7 @@ import Layout from "../layouts/Layout.astro";
                 ></svg
               >
             </div>
-            <div class="text-neutral-400">@_typesafe_</div>
+            <div class="text-neutral-500">@_typesafe_</div>
           </div>
           <button
             class="bg-neutral-200 text-black font-bold rounded-full px-4 my-auto py-2 ml-auto"
@@ -376,7 +373,7 @@ import Layout from "../layouts/Layout.astro";
                 ></svg
               >
             </div>
-            <div class="text-neutral-400">@codicocodes</div>
+            <div class="text-neutral-500">@codicocodes</div>
           </div>
           <button
             class="bg-neutral-200 text-black font-bold rounded-full px-4 my-auto py-2 ml-auto"
@@ -394,8 +391,8 @@ import Layout from "../layouts/Layout.astro";
           >
           </div>
           <div class="flex flex-col">
-            <div style="font-size: 1.05rem" class="font-bold flex items-center">
-              Chad R. Stewart
+            <div class="font-bold text-lg flex items-center">
+              Chad R. Ste...
               <svg
                 viewBox="0 0 22 22"
                 aria-label="Verified account"
@@ -409,7 +406,7 @@ import Layout from "../layouts/Layout.astro";
                 ></svg
               >
             </div>
-            <div class="text-neutral-400">@Chad_R_Stewart</div>
+            <div class="text-neutral-500">@Chad_R_Stewart</div>
           </div>
           <button
             class="bg-neutral-200 text-black font-bold rounded-full px-4 my-auto py-2 ml-auto"
@@ -442,7 +439,7 @@ import Layout from "../layouts/Layout.astro";
                 ></svg
               >
             </div>
-            <div class="text-neutral-400">@Hacksore</div>
+            <div class="text-neutral-500">@Hacksore</div>
           </div>
           <button
             class="bg-neutral-200 text-black font-bold rounded-full px-4 my-auto py-2 ml-auto"
@@ -471,7 +468,7 @@ import Layout from "../layouts/Layout.astro";
                 ></svg
               >
             </div>
-            <div class="text-neutral-400">@elonmusk</div>
+            <div class="text-neutral-500">@elonmusk</div>
           </div>
           <button
             class="bg-neutral-200 text-black font-bold rounded-full px-4 my-auto py-2 ml-auto"
@@ -504,7 +501,7 @@ import Layout from "../layouts/Layout.astro";
                 ></svg
               >
             </div>
-            <div class="text-neutral-400">@DanStepanov</div>
+            <div class="text-neutral-500">@DanStepanov</div>
           </div>
           <button
             class="bg-neutral-200 text-black font-bold rounded-full px-4 my-auto py-2 ml-auto"
