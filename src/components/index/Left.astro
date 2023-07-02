@@ -1,0 +1,127 @@
+---
+import LogoIcon from "../icons/Logo.astro";
+import HomeIcon from "../icons/Home.astro";
+import ExploreIcon from "../icons/Explore.astro";
+import NotificationIcon from "../icons/Notifications.astro";
+import MessageIcon from "../icons/Messages.astro";
+import ListIcon from "../icons/List.astro";
+import BookmarkIcon from "../icons/Bookmark.astro";
+import CommunityIcon from "../icons/Community.astro";
+import LimitedIcon from "../icons/Limited.astro";
+import ProfileIcon from "../icons/Profile.astro";
+import MoreIcon from "../icons/More.astro";
+
+import Button from "../ui/Button.astro";
+---
+
+<div
+  class="relative flex flex-col md:border-r border-b md:border-b-0 p-4 w-full md:w-72 md:h-screen gap-3 border-neutral-800"
+>
+  <LogoIcon />
+  <div
+    id="home"
+    class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full font-bold items-center cursor-pointer text-2xl"
+  >
+    <HomeIcon />
+    Home
+  </div>
+  <div
+    id="explore"
+    class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+  >
+    <ExploreIcon />
+    Explore
+  </div>
+  <div
+    id="notifs"
+    class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+  >
+    <NotificationIcon />
+    Notifications
+  </div>
+  <div
+    id="messages"
+    class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+  >
+    <MessageIcon />
+    Messages
+  </div>
+  <div
+    id="lists"
+    class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+  >
+    <ListIcon />
+    Lists
+  </div>
+  <div
+    id="bookmarks"
+    class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+  >
+    <BookmarkIcon />
+    Bookmarks
+  </div>
+  <div
+    id="communities"
+    class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+  >
+    <CommunityIcon />
+    Communities
+  </div>
+  <div
+    id="limited"
+    class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+  >
+    <LimitedIcon />
+    Limited
+  </div>
+  <div
+    id="profilelink"
+    class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+  >
+    <ProfileIcon />
+    Profile
+  </div>
+  <div
+    id="more"
+    class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
+  >
+    <MoreIcon />
+    More
+  </div>
+  <Button id="tweet">Tweet</Button>
+  <a
+    id="tweetmobile"
+    class="bg-[#1DA1F2] z-50 fixed bottom-4 right-4 mr-auto mt-4 p-4 font-bold text-xl md:hidden justify-center items-center text-neutral-200 gap-4 rounded-full h-18 w-18"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true" class="fill-neutral-200 h-8 w-8"
+      ><g
+        ><path
+          d="M23 3c-6.62-.1-10.38 2.421-13.05 6.03C7.29 12.61 6 17.331 6 22h2c0-1.007.07-2.012.19-3H12c4.1 0 7.48-3.082 7.94-7.054C22.79 10.147 23.17 6.359 23 3zm-7 8h-1.5v2H16c.63-.016 1.2-.08 1.72-.188C16.95 15.24 14.68 17 12 17H8.55c.57-2.512 1.57-4.851 3-6.78 2.16-2.912 5.29-4.911 9.45-5.187C20.95 8.079 19.9 11 16 11zM4 9V6H1V4h3V1h2v3h3v2H6v3H4z"
+        ></path></g
+      ></svg
+    >
+  </a>
+  <div
+    id="profile"
+    class="hidden md:flex w-[85%] items-center p-2 rounded-full hover:bg-neutral-800 duration-300 cursor-pointer absolute bottom-4 right-4 gap-4"
+  >
+    <div
+      class="rounded-full bg-contain bg-[url('https://pbs.twimg.com/profile_images/1590968738358079488/IY9Gx6Ok_400x400.jpg')] w-12 h-12"
+    >
+    </div>
+    <div class="flex flex-col">
+      <div class="text-lg font-bold">Elon Musk</div>
+      <div class="text-neutral-500">@elonmusk</div>
+    </div>
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      class="fill-neutral-400 w-6 h-6 ml-auto"
+      ><g
+        ><path
+          d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+        ></path></g
+      ></svg
+    >
+  </div>
+</div>

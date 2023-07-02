@@ -86,7 +86,7 @@ export default function Elon() {
                 points=".136 29.681 37.097 29.681 37.097 .307 .136 .307"
               ></polygon>
             </defs>
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none">
               <mask id="b" fill="white">
                 <use href="#a"></use>
               </mask>
@@ -208,6 +208,5 @@ export default function Elon() {
         </div>
       </div>
     </div>
-
   );
 }

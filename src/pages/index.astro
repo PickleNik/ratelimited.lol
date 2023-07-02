@@ -1,384 +1,112 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import User from "../components/User.astro";
-import Elon from "../components/Elon";
 
-import LogoIcon from "../components/ui/icons/Logo.astro";
-import HomeIcon from "../components/ui/icons/Home.astro";
-import ExploreIcon from "../components/ui/icons/Explore.astro";
-import NotificationIcon from "../components/ui/icons/Notifications.astro";
-import MessageIcon from "../components/ui/icons/Messages.astro";
-import ListIcon from "../components/ui/icons/List.astro";
-import BookmarkIcon from "../components/ui/icons/Bookmark.astro";
-import CommunityIcon from "../components/ui/icons/Community.astro";
-import LimitedIcon from "../components/ui/icons/Limited.astro";
-import ProfileIcon from "../components/ui/icons/Profile.astro";
-import MoreIcon from "../components/ui/icons/More.astro";
-import GithubIcon from "../components/ui/icons/Github.astro";
-
-import Button from "../components/ui/Button.astro";
-
+import Left from "../components/index/Left.astro";
+import Middle from "../components/index/Middle.astro";
+import Right from "../components/index/Right.astro";
 ---
 
 <Layout title="RateLimited">
-  <main id="container" class="flex md:flex-row flex-col">
-    <div
-      class="relative flex flex-col md:border-r border-b md:border-b-0 p-4 w-full md:w-72 md:h-screen gap-3 border-neutral-800"
-    >
-      <LogoIcon />
-      <div
-        id="home"
-        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full font-bold items-center cursor-pointer text-2xl"
-      >
-        <HomeIcon />
-        Home
-      </div>
-      <div
-        id="explore"
-        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
-      >
-        <ExploreIcon />
-        Explore
-      </div>
-      <div
-        id="notifs"
-        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
-      >
-        <NotificationIcon />
-        Notifications
-      </div>
-      <div
-        id="messages"
-        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
-      >
-        <MessageIcon />
-        Messages
-      </div>
-      <div
-        id="lists"
-        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
-      >
-        <ListIcon />
-        Lists
-      </div>
-      <div
-        id="bookmarks"
-        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
-      >
-        <BookmarkIcon />
-        Bookmarks
-      </div>
-      <div
-        id="communities"
-        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
-      >
-        <CommunityIcon />
-        Communities
-      </div>
-      <div
-        id="limited"
-        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
-      >
-        <LimitedIcon />
-        Limited
-      </div>
-      <div
-        id="profilelink"
-        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
-      >
-        <ProfileIcon />
-        Profile
-      </div>
-      <div
-        id="more"
-        class="hidden md:flex p-3 duration-300 gap-6 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
-      >
-        <MoreIcon />
-        More
-      </div>
-      <Button id="tweet">Tweet</Button>
-      <a
-        id="tweetmobile"
-        class="bg-[#1DA1F2] z-50 fixed bottom-4 right-4 mr-auto mt-4 p-4 font-bold text-xl md:hidden justify-center items-center text-neutral-200 gap-4 rounded-full h-18 w-18"
-      >
-
-        <svg
-
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          class="fill-neutral-200 h-8 w-8"
-          ><g
-            ><path
-              d="M23 3c-6.62-.1-10.38 2.421-13.05 6.03C7.29 12.61 6 17.331 6 22h2c0-1.007.07-2.012.19-3H12c4.1 0 7.48-3.082 7.94-7.054C22.79 10.147 23.17 6.359 23 3zm-7 8h-1.5v2H16c.63-.016 1.2-.08 1.72-.188C16.95 15.24 14.68 17 12 17H8.55c.57-2.512 1.57-4.851 3-6.78 2.16-2.912 5.29-4.911 9.45-5.187C20.95 8.079 19.9 11 16 11zM4 9V6H1V4h3V1h2v3h3v2H6v3H4z"
-            ></path></g
-          ></svg
-        >
-      </a>
-      <div
-        id="profile"
-        class="hidden md:flex w-[85%] items-center p-2 rounded-full hover:bg-neutral-800 duration-300 cursor-pointer absolute bottom-4 right-4 gap-4"
-      >
-        <div
-          class="rounded-full bg-contain bg-[url('https://pbs.twimg.com/profile_images/1590968738358079488/IY9Gx6Ok_400x400.jpg')] w-12 h-12"
-        >
-        </div>
-        <div class="flex flex-col">
-          <div class="text-lg font-bold">Elon Musk</div>
-          <div class="text-neutral-500">@elonmusk</div>
-        </div>
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          class="fill-neutral-400 w-6 h-6 ml-auto"
-          ><g
-            ><path
-              d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
-            ></path></g
-          ></svg
-        >
-      </div>
-    </div>
-    <div
-      class="relative w-full md:w-[598px] grid place-items-center md:h-screen h-[30vh] text-neutral-400"
-    >
-      <div class="-mt-32 text-center">Something went wrong. Try reloading.</div>
-      <button
-        id="whatever"
-        class="bg-[#1DA1F2] z-50 fixed duration-300 pr-5 p-4 py-3 font-bold text-2xl flex items-center text-white shadow-2xl gap-4 rounded-full"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true" class="fill-white h-8 w-8"
-          ><g
-            ><path
-              d="M12 4c-4.418 0-8 3.58-8 8s3.582 8 8 8c3.806 0 6.993-2.66 7.802-6.22l1.95.44C20.742 18.67 16.76 22 12 22 6.477 22 2 17.52 2 12S6.477 2 12 2c3.272 0 6.176 1.57 8 4V3.5h2v6h-6v-2h2.616C17.175 5.39 14.749 4 12 4z"
-            ></path></g
-          ></svg
-        >
-        Retry
-      </button>
-    </div>
-    <div
-      class="flex max-h-screen overflow-y-auto flex-col md:border-l border-t md:border-t-0 px-7 md:py-2 pt-7 md:w-[25rem] md:h-screen gap-4 border-neutral-800"
-    >
-      <div
-        class="px-4 pl-6 py-3 items-center hidden md:flex bg-neutral-900 text-neutral-500 rounded-full text-xl w-full gap-6"
-      >
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          class="w-6 h-6 fill-neutral-500"
-          ><g
-            ><path
-              d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z"
-            ></path></g
-          ></svg
-        ><span>Search Twitter</span>
-      </div>
-      <div class="hidden md:flex rounded-2xl bg-neutral-900 flex-col p-4">
-        <h1 class="text-2xl font-bold">Get Verified</h1>
-        <div class="flex">
-          <div class="flex flex-col">
-            <div style="font-size: 1.05rem" class="font-bold my-3">
-              Subscribe to unlock more ratelimiting!
-            </div>
-            <Button
-              id="verified"
-              className="bg-[#1DA1F2] mr-auto px-5 py-2 font-bold text-lg flex items-center text-white gap-4 rounded-full"
-            >
-              Get Verified
-            </Button>
-          </div>
-        </div>
-      </div>
-      <div class="hidden md:flex rounded-2xl bg-neutral-900 flex-col gap-4 p-4">
-        <h1 class="text-2xl font-bold">What's happenning?</h1>
-        <div class="flex gap-4">
-          <div class="flex flex-col">
-            <div class="text-neutral-500">Trending in United States</div>
-            <div class="text-lg font-bold">
-              You are rate limited. Please wait a few moments then try again.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="rounded-2xl bg-neutral-900 flex flex-col gap-4 p-4">
-        <h1 class="text-2xl font-bold">Who to follow</h1>
-        <User handle="PickleNik0864" name="PickleNik" badgeColor="fill-gray-500" avatarClass="bg-[url(https://pbs.twimg.com/profile_images/1652712728794898435/aNefvvvm_400x400.jpg)]"/>
-        <User handle="_typesafe_" name="Typesafe" badgeColor="fill-orange-300" avatarClass="bg-[url(https://pbs.twimg.com/profile_images/1675505542578556933/-xvWv1WB_400x400.jpg)]" />
-        <User handle="codicocodes" name="codico" badgeColor="fill-teal-300" avatarClass="bg-[url(https://pbs.twimg.com/profile_images/1419734467946614795/7sPi7tfG_400x400.png)]" />
-        <User handle="Chad_R_Stewart" name="Chad R. Ste..." badgeColor="fill-green-300" avatarClass="bg-[url(https://pbs.twimg.com/profile_images/1285282904050982912/70y9kQMJ_400x400.jpg)]"//>
-        <User handle="Hacksore" name="Hacksore" badgeColor="fill-red-400" avatarClass="bg-[url(https://pbs.twimg.com/profile_images/1580703612086501378/EcpbGeAn_400x400.jpg)]" />
-        <User handle="MDKHoo" name='Mark "Inexp...' badgeColor="fill-blue-300" avatarClass="bg-[url(https://pbs.twimg.com/profile_images/575370888951914497/wnrxy7Wr_400x400.jpeg)]" />
-        <User handle="DanStepanov" name="onlydans" badgeColor="fill-yellow-400" avatarClass="bg-[url(https://pbs.twimg.com/profile_images/1669495865478885376/7hWQn7ub_400x400.jpg)]" />
-        <Elon />
-
-    </div>
-
-    <div class="text-neutral-400 mx-4">
-      <a
-        class="mr-2 flex items-center hover:text-neutral-200 hover:underline decoration-wavy duration-300"
-        href="https://github.com/PickleNik/ratelimited.lol"
-      >
-        <GithubIcon />  
-        OpenSauce Algorithm
-      </a>© 2069 ratelimited Corp.
-    </div>
-    <div
-      id="notification"
-      class="bg-[#1DA1F2] text-neutral-200 rounded-md p-4 duration-300 fixed bottom-4 left-1/2 -translate-x-1/2 opacity-0"
-    >
-      Sorry, you are rate limited. Please wait a few moments then try again.
-    </div>
+  <main class="flex md:flex-row flex-col">
+    <Left />
+    <Middle />
+    <Right />
   </main>
+
+  <style>
+    @media screen and (max-height: 1000px) {
+      #bookmarks {
+        display: none;
+      }
+      #communities {
+        display: none;
+      }
+      #lists {
+        display: none;
+      }
+    }
+
+    @media screen and (max-height: 700px) {
+      #limited {
+        display: none;
+      }
+      #explore {
+        display: none;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    const b = document.querySelector("#whatever");
+    const g = document.querySelector("#verified");
+    const b2 = document.getElementById("whatever");
+    const notif = document.getElementById("notification");
+    const tweet = document.getElementById("tweet");
+    const tweetmobile = document.getElementById("tweetmobile");
+    const profile = document.getElementById("profile");
+
+    const home = document.getElementById("home");
+    const explore = document.getElementById("explore");
+    const notifs = document.getElementById("notifs");
+    const messages = document.getElementById("messages");
+    const lists = document.getElementById("lists");
+    const bookmarks = document.getElementById("bookmarks");
+    const communities = document.getElementById("communities");
+    const limited = document.getElementById("limited");
+    const profilel = document.getElementById("profilelink");
+    const more = document.getElementById("more");
+    const { width: cWidth, height: cHeight } =
+      document.documentElement.getBoundingClientRect();
+    const { width: bWidth, height: bHeight } = b.getBoundingClientRect();
+
+    // fun
+    b.addEventListener("mouseenter", () => move());
+    b.addEventListener("click", () => move());
+
+    // tweet on double click
+    tweet.addEventListener("dblclick", () => tweety());
+    tweetmobile.addEventListener("dblclick", () => tweety());
+
+    // notification on click
+    tweet.addEventListener("click", () => toggleNotif());
+    tweetmobile.addEventListener("click", () => toggleNotif());
+    profile.addEventListener("click", () => toggleNotif());
+    home.addEventListener("click", () => toggleNotif());
+    explore.addEventListener("click", () => toggleNotif());
+    notifs.addEventListener("click", () => toggleNotif());
+    messages.addEventListener("click", () => toggleNotif());
+    lists.addEventListener("click", () => toggleNotif());
+    bookmarks.addEventListener("click", () => toggleNotif());
+    communities.addEventListener("click", () => toggleNotif());
+    limited.addEventListener("click", () => toggleNotif());
+    profilel.addEventListener("click", () => toggleNotif());
+    more.addEventListener("click", () => toggleNotif());
+
+    g.addEventListener("click", () => {
+      g.style.borderRadius = "0.5rem";
+      g.innerText =
+        "Sorry, you are rate limited. Please wait a few moments then try again.";
+    });
+
+    function tweety() {
+      window.open(
+        "https://twitter.com/intent/tweet?url=ratelimited.lol",
+        "_blank"
+      );
+    }
+
+    function toggleNotif() {
+      notif.style.opacity = "1";
+      setTimeout(() => {
+        notif.style.opacity = "0";
+      }, 500);
+    }
+
+    function move() {
+      const i = Math.floor(Math.random() * (cWidth - bWidth)) + 1;
+      const j = Math.floor(Math.random() * (cHeight - bHeight)) + 1;
+      b2.style.left = i + "px";
+      b2.style.top = j + "px";
+    }
+  </script>
 </Layout>
-
-<style>
-  @media screen and (max-height: 1000px) {
-    #bookmarks {
-      display: none;
-    }
-    #communities {
-      display: none;
-    }
-    #lists {
-      display: none;
-    }
-  }
-
-  @media screen and (max-height: 700px) {
-    #limited {
-      display: none;
-    }
-    #explore {
-      display: none;
-    }
-  }
-</style>
-
-<script is:inline>
-// const c = document.querySelector("#container");
-const b = document.querySelector("#whatever");
-const g = document.querySelector("#verified");
-const b2 = document.getElementById("whatever");
-const notif = document.getElementById("notification");
-const tweet = document.getElementById("tweet");
-const tweetmobile = document.getElementById("tweetmobile");
-const profile = document.getElementById("profile");
-
-const home = document.getElementById("home");
-const explore = document.getElementById("explore");
-const notifs = document.getElementById("notifs");
-const messages = document.getElementById("messages");
-const lists = document.getElementById("lists");
-const bookmarks = document.getElementById("bookmarks");
-const communities = document.getElementById("communities");
-const limited = document.getElementById("limited");
-const profilel = document.getElementById("profilelink");
-const more = document.getElementById("more");
-const { width: cWidth, height: cHeight } =
-  document.documentElement.getBoundingClientRect();
-const { width: bWidth, height: bHeight } = b.getBoundingClientRect();
-
-function move() {
-  const i = Math.floor(Math.random() * (cWidth - bWidth)) + 1;
-  const j = Math.floor(Math.random() * (cHeight - bHeight)) + 1;
-  b2.style.left = i + "px";
-  b2.style.top = j + "px";
-}
-g.addEventListener("click", () => {
-  g.style.borderRadius = "0.5rem";
-  g.innerText =
-    "Sorry, you are rate limited. Please wait a few moments then try again.";
-});
-b.addEventListener("mouseenter", () => move());
-b.addEventListener("click", () => move());
-tweet.addEventListener("click", () => {
-  notif.style.opacity = "1";
-  setTimeout(() => {
-    notif.style.opacity = "0";
-  }, 500);
-});
-tweetmobile.addEventListener("click", () => {
-  notif.style.opacity = "1";
-  setTimeout(() => {
-    notif.style.opacity = "0";
-  }, 500);
-});
-tweet.addEventListener("dblclick", () => {
-  window.open(
-    "https://twitter.com/intent/tweet?url=ratelimited.lol",
-    "_blank"
-  );
-});
-tweetmobile.addEventListener("dblclick", () => {
-  window.open(
-    "https://twitter.com/intent/tweet?url=ratelimited.lol",
-    "_blank"
-  );
-});
-profile.addEventListener("click", () => {
-  notif.style.opacity = "1";
-  setTimeout(() => {
-    notif.style.opacity = "0";
-  }, 500);
-});
-home.addEventListener("click", () => {
-  notif.style.opacity = "1";
-  setTimeout(() => {
-    notif.style.opacity = "0";
-  }, 500);
-});
-explore.addEventListener("click", () => {
-  notif.style.opacity = "1";
-  setTimeout(() => {
-    notif.style.opacity = "0";
-  }, 500);
-});
-notifs.addEventListener("click", () => {
-  notif.style.opacity = "1";
-  setTimeout(() => {
-    notif.style.opacity = "0";
-  }, 500);
-});
-messages.addEventListener("click", () => {
-  notif.style.opacity = "1";
-  setTimeout(() => {
-    notif.style.opacity = "0";
-  }, 500);
-});
-lists.addEventListener("click", () => {
-  notif.style.opacity = "1";
-  setTimeout(() => {
-    notif.style.opacity = "0";
-  }, 500);
-});
-bookmarks.addEventListener("click", () => {
-  notif.style.opacity = "1";
-  setTimeout(() => {
-    notif.style.opacity = "0";
-  }, 500);
-});
-communities.addEventListener("click", () => {
-  notif.style.opacity = "1";
-  setTimeout(() => {
-    notif.style.opacity = "0";
-  }, 500);
-});
-limited.addEventListener("click", () => {
-  notif.style.opacity = "1";
-  setTimeout(() => {
-    notif.style.opacity = "0";
-  }, 500);
-});
-profilel.addEventListener("click", () => {
-  notif.style.opacity = "1";
-  setTimeout(() => {
-    notif.style.opacity = "0";
-  }, 500);
-});
-more.addEventListener("click", () => {
-  notif.style.opacity = "1";
-  setTimeout(() => {
-    notif.style.opacity = "0";
-  }, 500);
-});
-</script>
