@@ -550,13 +550,19 @@ import Layout from "../layouts/Layout.astro";
       notif.style.opacity = "0";
     }, 500);
   });
-  tweet.addEventListener("dbclick", () => {
+  tweetmobile.addEventListener("click", () => {
+    notif.style.opacity = "1";
+    setTimeout(() => {
+      notif.style.opacity = "0";
+    }, 500);
+  });
+  tweet.addEventListener("dblclick", () => {
     window.open(
       "https://twitter.com/intent/tweet?url=ratelimited.lol",
       "_blank"
     );
   });
-  tweetmobile.addEventListener("dbclick", () => {
+  tweetmobile.addEventListener("dblclick", () => {
     window.open(
       "https://twitter.com/intent/tweet?url=ratelimited.lol",
       "_blank"
