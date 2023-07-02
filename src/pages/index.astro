@@ -13,29 +13,6 @@ import Right from "../components/index/Right.astro";
     <Right />
   </main>
 
-  <style>
-    @media screen and (max-height: 1000px) {
-      #bookmarks {
-        display: none;
-      }
-      #communities {
-        display: none;
-      }
-      #lists {
-        display: none;
-      }
-    }
-
-    @media screen and (max-height: 700px) {
-      #limited {
-        display: none;
-      }
-      #explore {
-        display: none;
-      }
-    }
-  </style>
-
   <script is:inline>
     const b = document.querySelector("#whatever");
     const g = document.querySelector("#verified");

@@ -11,7 +11,7 @@ import LimitedIcon from "../icons/Limited.astro";
 import ProfileIcon from "../icons/Profile.astro";
 import MoreIcon from "../icons/More.astro";
 
-import Button from "../ui/Button.astro";
+import Button from "./Button.astro";
 ---
 
 <div
@@ -125,3 +125,38 @@ import Button from "../ui/Button.astro";
     >
   </div>
 </div>
+
+<style>
+  @media screen and (max-height: 1000px) {
+    #bookmarks {
+      display: none;
+    }
+  }
+
+  @media screen and (max-height: 900px) {
+    #lists {
+      display: none;
+    }
+    #communities {
+      display: none;
+    }
+  }
+
+  @media screen and (max-height: 800px) {
+    #explore {
+      display: none;
+    }
+  }
+
+  @media screen and (max-height: 700px) {
+    #limited {
+      display: none;
+    }
+  }
+
+  @media screen and (max-height: 600px) {
+    #more {
+      display: none;
+    }
+  }
+</style>
