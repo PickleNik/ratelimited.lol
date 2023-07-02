@@ -113,7 +113,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="-mt-32 text-center">Something went wrong. Try reloading.</div>
       <button
         id="whatever"
-        class="bg-[#1DA1F2] fixed duration-300 pr-5 p-4 py-3 font-bold text-2xl flex items-center text-white gap-4 rounded-full"
+        class="bg-[#1DA1F2] z-50 fixed duration-300 pr-5 p-4 py-3 font-bold text-2xl flex items-center text-white gap-4 rounded-full"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true" class="fill-white h-8 w-8"
           ><g
@@ -209,6 +209,20 @@ import Layout from "../layouts/Layout.astro";
             <div class="text-neutral-400">@elonmusk</div>
           </div>
         </div>
+        <a
+          href="https://twitter.com/DanStepanov"
+          class="flex gap-4"
+          target="_blank"
+        >
+          <div
+            class="rounded-full bg-contain bg-[url('https://pbs.twimg.com/profile_images/1669495865478885376/7hWQn7ub_400x400.jpg')] w-12 h-12"
+          >
+          </div>
+          <div class="flex flex-col">
+            <div class="text-lg font-bold">onlydans</div>
+            <div class="text-neutral-400">@DanStepanov</div>
+          </div>
+        </a>
       </div>
       <div class="text-neutral-400 mx-4">
         <a
@@ -238,14 +252,15 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <script is:inline>
-  const c = document.querySelector("#container");
+  // const c = document.querySelector("#container");
   const b = document.querySelector("#whatever");
   const g = document.querySelector("#verified");
   const b2 = document.getElementById("whatever");
   const notif = document.getElementById("notification");
   const tweet = document.getElementById("tweet");
   const profile = document.getElementById("profile");
-  const { width: cWidth, height: cHeight } = c.getBoundingClientRect();
+  const { width: cWidth, height: cHeight } =
+    document.documentElement.getBoundingClientRect();
   const { width: bWidth, height: bHeight } = b.getBoundingClientRect();
 
   function move() {
