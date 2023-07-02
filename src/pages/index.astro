@@ -18,6 +18,7 @@ import Layout from "../layouts/Layout.astro";
         ></path></svg
       >
       <div
+        id="home"
         class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full font-bold items-center cursor-pointer text-2xl"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8 fill-white"
@@ -30,6 +31,7 @@ import Layout from "../layouts/Layout.astro";
         Home
       </div>
       <div
+        id="notifs"
         class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8 fill-white"
@@ -42,6 +44,7 @@ import Layout from "../layouts/Layout.astro";
         Notifications
       </div>
       <div
+        id="messages"
         class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8 fill-white"
@@ -54,6 +57,7 @@ import Layout from "../layouts/Layout.astro";
         Messages
       </div>
       <div
+        id="profilelink"
         class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8 fill-white"
@@ -66,6 +70,7 @@ import Layout from "../layouts/Layout.astro";
         Profile
       </div>
       <div
+        id="more"
         class="hidden md:flex p-3 duration-300 gap-4 hover:bg-neutral-500 hover:bg-opacity-25 rounded-full items-center cursor-pointer text-2xl"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8 fill-white"
@@ -287,6 +292,12 @@ import Layout from "../layouts/Layout.astro";
   const notif = document.getElementById("notification");
   const tweet = document.getElementById("tweet");
   const profile = document.getElementById("profile");
+
+  const home = document.getElementById("home");
+  const notifs = document.getElementById("notifs");
+  const messages = document.getElementById("messages");
+  const profilel = document.getElementById("profilelink");
+  const more = document.getElementById("more");
   const { width: cWidth, height: cHeight } =
     document.documentElement.getBoundingClientRect();
   const { width: bWidth, height: bHeight } = b.getBoundingClientRect();
@@ -311,6 +322,36 @@ import Layout from "../layouts/Layout.astro";
     }, 500);
   });
   profile.addEventListener("click", () => {
+    notif.style.opacity = "1";
+    setTimeout(() => {
+      notif.style.opacity = "0";
+    }, 500);
+  });
+  home.addEventListener("click", () => {
+    notif.style.opacity = "1";
+    setTimeout(() => {
+      notif.style.opacity = "0";
+    }, 500);
+  });
+  notifs.addEventListener("click", () => {
+    notif.style.opacity = "1";
+    setTimeout(() => {
+      notif.style.opacity = "0";
+    }, 500);
+  });
+  messages.addEventListener("click", () => {
+    notif.style.opacity = "1";
+    setTimeout(() => {
+      notif.style.opacity = "0";
+    }, 500);
+  });
+  profilel.addEventListener("click", () => {
+    notif.style.opacity = "1";
+    setTimeout(() => {
+      notif.style.opacity = "0";
+    }, 500);
+  });
+  more.addEventListener("click", () => {
     notif.style.opacity = "1";
     setTimeout(() => {
       notif.style.opacity = "0";
