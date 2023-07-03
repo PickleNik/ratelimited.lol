@@ -40,8 +40,6 @@ import Right from "../components/index/Right.astro";
     const limited = document.getElementById("limited");
     const profilel = document.getElementById("profilelink");
     const more = document.getElementById("more");
-    const { width: cWidth, height: cHeight } =
-      document.documentElement.getBoundingClientRect();
     const { width: bWidth, height: bHeight } = b.getBoundingClientRect();
 
     // fun
@@ -92,8 +90,8 @@ import Right from "../components/index/Right.astro";
     }
 
     function move() {
-      const i = Math.floor(Math.random() * (cWidth - bWidth)) + 1;
-      const j = Math.floor(Math.random() * (cHeight - bHeight)) + 1;
+      const i = Math.floor(Math.random() * (window.innerWidth - bWidth)) + 1;
+      const j = Math.floor(Math.random() * (window.innerHeight - bHeight)) + 1;
       b2.style.left = i + "px";
       b2.style.top = j + "px";
     }
