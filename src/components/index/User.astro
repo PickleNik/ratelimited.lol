@@ -9,10 +9,14 @@ export interface Props {
 const { name, handle, badgeColor, avatarClass } = Astro.props;
 ---
 
-<a href={`https://twitter.com/${handle}`} class="flex gap-4" target="_blank">
+<a
+  href={`https://twitter.com/${handle}`}
+  class="flex items-center hover:bg-white/5 duration-150 px-4 py-3 gap-4"
+  target="_blank"
+>
   <div class={`rounded-full bg-contain ${avatarClass} w-12 h-12`}></div>
   <div class="flex flex-col">
-    <div class="text-lg font-bold flex items-center">
+    <div class="text-lg font-bold flex items-center hover:underline">
       {name}
       <svg
         viewBox="0 0 22 22"
@@ -30,7 +34,7 @@ const { name, handle, badgeColor, avatarClass } = Astro.props;
     <div class="text-neutral-500">@{handle}</div>
   </div>
   <button
-    class="bg-neutral-200 text-black font-bold rounded-full px-4 my-auto py-2 ml-auto"
+    class="bg-neutral-200 hover:bg-neutral-300 duration-200 text-black font-bold rounded-full px-4 my-auto py-2 ml-auto"
   >
     Follow
   </button>

@@ -1,7 +1,7 @@
 // NOTE: This guy is literally built different
 export default function Elon() {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 px-4 py-3 hover:bg-white/5 duration-150">
       <div className="rounded-full bg-contain bg-[url('https://pbs.twimg.com/profile_images/1590968738358079488/IY9Gx6Ok_400x400.jpg')] w-12 h-12"></div>
       <div className="flex flex-col">
         <div className="font-bold flex items-center">Elon Musk</div>
