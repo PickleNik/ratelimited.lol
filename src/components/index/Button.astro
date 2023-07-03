@@ -9,9 +9,9 @@ const { id, className } = Astro.props;
 
 <button
   {id}
-  class={`bg-[#1DA1F2] hidden ${
+  class={`bg-[#1d9bf0] hover:bg-[#1b91df] duration-200 hidden ${
     id == "verified" ? "w-full" : "w-[90%]"
-  } mr-auto mt-4 p-4 font-bold text-xl md:flex justify-center items-center text-white gap-4 rounded-full`}
+  } mr-auto p-4 font-bold mt-1 text-xl md:flex justify-center items-center text-white gap-4 rounded-full`}
 >
   <slot class={className} />
 </button>
