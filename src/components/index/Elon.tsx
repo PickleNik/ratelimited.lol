@@ -7,7 +7,7 @@ export default function Elon() {
         <div className="font-bold flex items-center">Elon Musk</div>
         <div className="text-neutral-500">@elonmusk</div>
       </div>
-      <div className="flex flex-col gap-1 -ml-5 pt-[2px]">
+      <div className="flex flex-col gap-1 -ml-4 pt-[2px]">
         <div className="flex">
           <svg
             viewBox="0 0 22 22"
