@@ -66,6 +66,8 @@ import Right from "../components/index/Right.astro";
     more.addEventListener("click", () => toggleNotif());
 
     g.addEventListener("click", () => {
+      g.classList.remove("hover:bg-[#1b91df]");
+      g.classList.remove("duration-200");
       g.style.borderRadius = "0.5rem";
       g.innerText =
         "Sorry, you are rate limited. Please wait a few moments then try again.";
