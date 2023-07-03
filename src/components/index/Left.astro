@@ -148,6 +148,11 @@ import Button from "./Button.astro";
   #navbar {
     gap: 0.85rem;
   }
+  @media (max-width: 768px) {
+    #navbar {
+      gap: 0 !important;
+    }
+  }
   @media screen and (max-height: 846px) {
     #navbar {
       gap: 0.25rem;
